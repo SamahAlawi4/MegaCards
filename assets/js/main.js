@@ -288,3 +288,28 @@
   });
 
 })()
+
+//login 
+var signInButton= document.querySelector(".btn-outline-warning");
+var formContainer= document.querySelector(".logIn-forms");
+const body = document.querySelector('body');
+
+
+signInButton.addEventListener('click', function() {
+  formContainer.style.display = 'flex';
+});
+
+
+
+
+signInButton.addEventListener('click', function() {
+  formContainer.style.display = 'flex'; // عرض النموذج عند النقر على الزر
+  body.classList.add('hidden-content'); // تقليل شفافية المحتوى
+});
+
+
+document.querySelector('.icon-close').addEventListener('click', function() {
+  document.querySelector('.logIn-forms').style.display = 'none';
+});
+
+

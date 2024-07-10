@@ -12,12 +12,34 @@
    
 
 }
+.form-details{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #138df7;
+  
+}
+.filedset{
+  padding: 50px;
+  width: 250px;
+}
+
 .product_detalis{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-around;
     margin-top: 80px;
     gap:50px;
+    width: calc( 100% - 80px /2);
    
+}
+.ss{
+  display: flex;
+  flex-direction: row;
+  gap:20px;
+  text-align: center;
 }
 .img_products3 img {
     width: 180px;
@@ -59,7 +81,7 @@
    
  }
  .det_price{
-    background-color: azure;
+     padding: 15px;
     display:inline-flex;
     flex-direction: row;
     gap: 20px;
@@ -72,10 +94,108 @@
   width: 100px;
   border-radius: 8px;
   padding: 5px;
+  cursor: pointer;
  
 }
 
 .det_price1:hover{
     box-shadow: 0 0 2px #231f1f,
     0 0 4px #787777;
+ }
+
+ .uplod_apps .btn3{
+    width: 150px;
+    height: 40px;
+    background-color: #f6b024;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+ }
+ .uplod_apps .btn-primary1{ 
+   background-color: #138df7;
+   color: #3caec0;
+  
+ }
+ .uplod_apps a{
+   display: flex;
+   flex-direction: row;
+   gap: 10px;
+   align-items: center;
+ }
+
+ .last-sam{
+  margin-top: 0px;
+  height: 280px;
+  border:1px solid transparent;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0,30);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  flex-direction: column;
+  
+ 
+ 
+ }
+
+ .input-group{
+  width: 150px;
+ padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+  gap:5px;
+ }
+ .form-control{
+  
+  border-radius: 8px;
+ }
+ .input-group span{
+ 
+  background-color: #3caec0;
+  
+ }
+ .label{
+  text-align: center;
+  
+  margin-top: 5px;
+  padding-top: 4px;
+  color: #f6b024;
+  transform-style: preserve-3d;
+
+ 
+ }
+
+
+
+
+ .sam{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+
+ }
+ .first-sam{
+  display: flex;
+  flex-direction: column;
+  
+ }
+ .first-sam .product_detalis{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+ }
+ .price{
+     color: #231f1f;
+     font-style: italic;
+ }
+ .del{
+     color: #c60c0c;
+     font-weight: 200;
  }

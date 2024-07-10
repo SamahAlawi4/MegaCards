@@ -65,6 +65,147 @@ h6 {
   visibility: visible;
   opacity: 1;
 }
+.btn-outline-warning{
+ margin: 10px;
+ width: 80px;
+ margin-top: 10px;
+ margin-left: 20px;
+ height: 40px;
+
+}
+/*log in*/
+.wrapper{
+  position: relative;
+  width: 400px;
+  height: 440px;
+  background: transparent;
+  border: 2px solid rgb(255, 255, 255,0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgb(0, 0, 0,.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+  margin-left: 500px;
+  overflow:hidden;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0;
+  transition: .1s ease;
+  
+ 
+}
+.show-popup .wrapper{
+  pointer-events: auto;
+  opacity: 1;
+
+}
+
+
+.wrapper .form-box{
+  width: 100%;
+  padding: 40px;
+}
+
+.form-box h2{
+  font-size: 2em;
+  text-align: center;
+  color: #fbb40c;
+}
+.show-popup .form-box{
+  pointer-events: auto;
+  opacity: 1;
+
+}
+.input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #162938;
+  margin:30px 0;
+
+}
+.input-box label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em ;
+  color:#162938;
+  font-weight: 500;
+  pointer-events: none;
+  transition: .5s;
+}
+.input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding:0 35px 0 5px;
+}
+.input-box .icon{
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  color:#162938;
+  line-height: 57px;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+  top:-5px;
+
+}
+.remember-forgot{
+  font-size: .9em;
+  color:#162938;
+  font-weight: 500;
+  margin: -15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.remember-forgot label input{
+  accent-color:#162938;
+  margin-right: 3px;
+}
+.remember-forgot a{
+  color:#162938;
+  text-decoration:none ;
+}
+.remember-forgot a :hover{
+  text-decoration: underline;
+}
+.btnx{
+  width: 100%;
+  height: 45px;
+  background: #162938;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #fbb40c;
+  font-weight: 500;
+}
+.login-register{
+  font-size: .9em;
+  color:#162938;
+  text-align: center;
+  font-weight: 500;
+  margin: 25px 0 10px;
+}
+.login-register p a{
+  color:#162938;
+  text-decoration: none;
+  font-weight: 600;
+}
+.login-register p a:hover{
+  text-decoration: underline;
+}
+
+
+/*log in*/
 
 /*--------------------------------------------------------------
 # Preloader
@@ -119,10 +260,11 @@ h6 {
   height: 60px;
   padding: 0;
   font-size: 14px;
-  transition: all 0.5s;
+  transition: all 0.2s;
   overflow: hidden;
   color: rgba(255, 255, 255, 0.8);
   z-index: 996;
+  background-color:rgba(5, 87, 158, 0.9) ;
 }
 
 #topbar.topbar-scrolled {
@@ -174,7 +316,7 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   height: 70px;
-  top: 60px;
+  top: 0px;
 }
 
 #header.header-scrolled {
@@ -208,6 +350,120 @@ h6 {
   background: rgba(6, 98, 178, 0.9) !important;
 }
 
+/*form login*/
+.logIn-forms{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  opacity: 2;
+  
+  justify-content: center;
+
+}
+
+.container-login{
+  
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0,35);
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  max-width: 100%;
+  min-height: 480px;
+}
+.container-login p{
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  margin: 20px 0;
+}
+.container-login span{
+  font-size: 12px;
+
+}
+.container-login a{
+  color:#333;
+  font-size: 13px;
+  text-decoration: none;
+  margin: 15px 0 10px;
+
+}
+.container-login button{
+  background-color:rgba(27, 46, 63, 0.9) ;
+  color:#fff;
+  font-size: 12px;
+  padding: 10px 45px;
+  border:1px solid transparent;
+  border-radius: 8px;
+  font-weight: 600px;
+  letter-spacing: 0.5;
+  text-transform: uppercase;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.container-login form{
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  height: 100%;
+
+}
+.container-login input{
+  background-color: #eee;
+  border: none;
+  margin: 8px 0;
+  padding: 10px 15px;
+  font-size: 13px;
+  border-radius: 8px;
+  width: 50%;
+  outline: none;
+
+
+}
+.toogle-panel{
+  position: absolute;
+  top:0;
+  left:50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.6s ease-in-out;
+  z-index: 1000;
+  background-color: #05579e;
+  color: #fff;
+  border-radius: 110px 0 0 100px;
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  }
+  .logIn-forms .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background-color: #05579e;
+    font-size: 2em;
+    color: #fcfbfb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+ }
+ .logIn-forms .form-img{
+  display: block;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  margin-left: 100px;
+ }
+/*form login*/
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -216,6 +472,7 @@ h6 {
 */
 .navbar {
   padding: 0;
+ 
 }
 
 .navbar ul {
@@ -478,7 +735,8 @@ h6 {
   height: 80vh;
   overflow: hidden;
   position: relative;
-  background: url("../img/hero-bg.jpg") top center;
+  
+  background-color:rgba(52, 95, 132, 0.9) ;
   background-size: cover;
   position: relative;
   margin-bottom: -90px;
@@ -718,7 +976,8 @@ section {
   color:#ddd;
 }
 .img-fluid{
-  width: 413px;
+  width: 400px;
+  height: 300px;
 }
 .uplod_apps a{
   color:#ecf6fe;
@@ -731,6 +990,29 @@ section {
   gap:15px;
   font-family: 'Times New Roman', Times, serif;
   font-size: small;
+}
+.uplod_apps .btn-lg{
+   width: 150px;
+   height: 40px;
+   background-color: #f6b024;
+   border-radius: 12px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   text-align: center;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: larger;
+}
+.uplod_apps .btn-primary1{ 
+  background-color: #138df7;
+  color: #3caec0;
+ 
+}
+.uplod_apps a{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
 }
 .uplod_apps .btn-lg:hover{
   box-shadow:0px 0px 2px rgba(244, 246, 250, 0.945),
@@ -1177,8 +1459,8 @@ section {
 .portfoio .portfolio-item .portfolio-info {
   opacity: 0;
   position: absolute;
-  left: 15px;
-  right: 15px;
+  left: 12px;
+  right: 28px;
   bottom: -50px;
   z-index: 3;
   transition: all ease-in-out 0.3s;
